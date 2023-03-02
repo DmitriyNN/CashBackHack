@@ -5,7 +5,6 @@ import org.testng.annotations.Test;
 import static org.testng.Assert.*;
 
 public class CashbackHackServiceTest {
-
     @Test
     public void testRemain() { // Тестируем случай, когда сумма покупки меньше граничных значений
         CashbackHackService service = new CashbackHackService();
