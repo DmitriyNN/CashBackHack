@@ -1,21 +1,22 @@
 package ru.netology;
 
-import org.testng.annotations.Test;
+import org.junit.Test;
 
-import static org.testng.Assert.*;
+import static org.junit.Assert.*;
 
 public class CashbackHackServiceTest {
+
     @Test
-    public void testRemain() { // Тестируем случай, когда сумма покупки меньше граничных значений
+    public void remain() { // Тестируем случай, когда сумма покупки меньше граничных значений
         CashbackHackService service = new CashbackHackService();
-        int amount = 400;
+        int amount = 120;
         int actual = service.remain(amount);
-        int expected = 600;
+        int expected = 880;
         assertEquals(actual, expected);
     }
 
     @Test
-    public void testRemain1() { // Тестируем граничные значения
+    public void remain1() { // Тестируем граничные значения
         CashbackHackService service = new CashbackHackService();
         int amount = 900;
         int actual = service.remain(amount);
@@ -24,7 +25,7 @@ public class CashbackHackServiceTest {
     }
 
     @Test
-    public void testRemain2() { // Тестируем граничные значения
+    public void remain2() { // Тестируем граничные значения
         CashbackHackService service = new CashbackHackService();
         int amount = 1000;
         int actual = service.remain(amount);
@@ -33,7 +34,7 @@ public class CashbackHackServiceTest {
     }
 
     @Test
-    public void testRemain3() { // Тестируем граничные значения
+    public void remain3() { // Тестируем граничные значения
         CashbackHackService service = new CashbackHackService();
         int amount = 1100;
         int actual = service.remain(amount);
@@ -42,9 +43,9 @@ public class CashbackHackServiceTest {
     }
 
     @Test
-    public void testRemain4() { // Тестируем случай, когда сумма покупки больше граничных значений
+    public void remain4() { // Тестируем случай, когда сумма покупки больше граничных значений
         CashbackHackService service = new CashbackHackService();
-        int amount = 1800;
+        int amount = 4263;
         int actual = service.remain(amount);
         int expected = 0;
         assertEquals(actual, expected);
